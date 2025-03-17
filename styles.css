@@ -25,6 +25,13 @@ a {
   color: #fff;
 }
 
+hr {
+  margin: 10px 0; 
+  border: none; 
+  height: 1px; 
+  background-color: #323232; 
+}
+
 
 /* Navigation Bar */
 .navbar {
@@ -33,10 +40,10 @@ a {
   align-items: center;
   padding: 5px;
   position: sticky;
-  top: 0;  /* 让 navbar 贴在顶部 */
+  top: 0;  
   width: 100%;
   z-index: 100;
-  background-color: rgb(0, 0, 0); /* 确保 navbar 背景色，不然滚动时可能透明 */
+  background-color: rgb(0, 0, 0); 
 }
 
 .nav-links {
@@ -109,28 +116,39 @@ a {
 
 /* About Us Section */
 .about-section {
-  padding: 50px;
+  padding: 20px;
   text-align: center;
   background-color: #111;
 }
 
 .team {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; 
   align-items: center;
-  gap: 20px; /* 控制间距 */
-  max-width: 1000px; /* 限制最大宽度 */
+  gap: 40px;
+  max-width: 800px; 
   margin: 0 auto;
+  padding: 20px;
 }
 
-/* 让 .person 和 .description 各占一半 */
+/* 让左侧和右侧的宽度适中 */
 .team-member, .description {
-  flex: 1;
+  text-align: left;
+}
+
+
+.person p{
+  margin-bottom: -8px;
 }
 
 .description li {
   text-align: left;
 }
+
+.description-small{
+  margin-top: 40px;
+}
+
 
 /* 手机端适配 */
 @media screen and (max-width: 768px) {
@@ -223,7 +241,7 @@ a {
 
 .description-small{
   font-size: 14px ;
-  color: #927a59
+  color: #927a59;
 }
 
 .team-info {
@@ -257,7 +275,7 @@ a {
   align-items: center; /* 水平居中 */
   justify-content: center; /* 垂直居中 */
   text-align: center;
-  min-height: 100vh; /* 让整个区域至少占满一屏 */
+  min-height:fit-content; /* 让整个区域至少占满一屏 */
 }
 
 
@@ -307,27 +325,23 @@ a {
 }
 
 .education-card img {
-  width: 450px; /* 默认桌面端宽度 */
-  max-width: 80%; /* 确保不会超出容器 */
+  width: 30%; /* 默认桌面端宽度 */
   height: auto; /* 保持图片比例 */
   border-radius: 10px;
-  filter: brightness(0);
-  transition: filter 1s ease-in-out;
-  display: block;
   margin: 0 auto;
 }
 
 /* Education phone setting */
 @media (max-width: 768px) {
   .education-card img {
-    width: 100%; /* 让图片填充整个父容器 */
-    max-width: 100%; /* 确保不会超出屏幕 */
+    width: 30%; /* 让图片填充整个父容器 */
+    height: auto; /* 保持图片比例 */
+    margin: 0 auto;
   }
 
   .education-text,
   .education-desc {
-    text-align: left; /* 文字靠左 */
-    padding-left: 10px; /* 添加左侧间距，避免贴边 */
+    text-align: center; /* 文字靠左 */
   }
 }
 
@@ -775,7 +789,7 @@ a {
 
 /* Footer */
 .footer {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   background-color: #111;
 }
@@ -787,5 +801,5 @@ a {
 }
 
 .footer-links li {
-  margin: 0 15px;
+  margin: 0 5px;
 }
