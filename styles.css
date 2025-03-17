@@ -267,9 +267,8 @@ hr {
 
 .experience-card {
   position: relative;
-  width: 80%;
+  width: 98%;
   height: auto;
-  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center; /* 水平居中 */
@@ -300,7 +299,7 @@ hr {
 /* Education Section */
 .education-section {
   text-align: center;
-  background-color: #111;
+  background-color: #000000;
 }
 
 .education-card {
@@ -342,7 +341,7 @@ hr {
 /* slideshow */
 .slideshow-container {
   position: relative;
-  max-width: 70%;
+  max-width: 90%;
   margin: auto;
   overflow: hidden;
 }
