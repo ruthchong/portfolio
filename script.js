@@ -86,3 +86,35 @@ document.querySelectorAll(".gallery img").forEach(img => {
     });
 });
 
+//幻灯片
+let slideIndexes = [0, 0, 0]; // 每个幻灯片的索引
+const slideContainers = document.querySelectorAll(".slideshow-container");
+
+// 初始化所有幻灯片，并设置自动播放
+slideContainers.forEach((container, index) => {
+  showSlides(0, index);
+  setInterval(() => plusSlides(1, index), 3000); // 每3秒自动播放
+});
+
+function plusSlides(n, slideshowIndex) {
+  showSlides(slideIndexes[slideshowIndex] + n, slideshowIndex);
+}
+
+function showSlides(n, slideshowIndex) {
+  let slides = slideContainers[slideshowIndex].getElementsByClassName("interior");
+
+  if (n >= slides.length) {
+    slideIndexes[slideshowIndex] = 0;
+  } else if (n < 0) {
+    slideIndexes[slideshowIndex] = slides.length - 1;
+  } else {
+    slideIndexes[slideshowIndex] = n;
+  }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndexes[slideshowIndex]].style.display = "block";
+}
+
