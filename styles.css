@@ -49,6 +49,7 @@ hr {
 .nav-links {
   list-style: none;
   display: flex;
+  text-align: center;
 }
 
 .nav-links li {
